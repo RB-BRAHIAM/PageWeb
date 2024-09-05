@@ -1,0 +1,17 @@
+.cool-btn{
+    background-color: transparent;
+    color: #000;
+    padding: .5rem 1rem;
+    border: 1px solid #000;
+    font-size: 1.5rem;
+    width: 35%;
+    transition: 0.3s;
+}
+.cool-btn:hover{
+    transform: translateY(-10px);
+    background-color: #000;
+    color: #fff;
+}
+.body{
+    background: -webkit-linear-gradient(top, #ffffff 50%, #031634 80%);
+}

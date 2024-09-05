@@ -1,0 +1,218 @@
+<?php
+
+$coneccion= mysqli_connect("127.0.0.1","root","", "bd_handmade");
+$consulta_cons=mysqli_query($coneccion,"select * from consecutivo_cliente");
+$consecutivo_actual=mysqli_fetch_array($consulta_cons);
+$consecutivo_actual=$consecutivo_actual["consecutivo"];
+$consecutivo_para_cliente=$consecutivo_actual+1;
+
+$consulta_cons=mysqli_query($coneccion,"update consecutivo_cliente set consecutivo='".$consecutivo_para_cliente."'");
+
+
+//Dos metodos (GET Y POST)
+//tomar un valor de POST
+
+
+
+?>
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+  <script>
+          function agregar_al_carrito(idproducto)
+          {
+            nombre_boton="boton"+idproducto;
+            document.getElementById(nombre_boton).disabled=true;
+
+            loquehay=document.getElementById("productosacomprar").value+idproducto;
+            loquehay=loquehay+","
+            document.getElementById("productosacomprar").value=loquehay;
+            document.getElementById('btn-finalizar').style.display='block';
+          }
+          
+      </script>
+    <link rel="icon" type="image/jpg" href="imagenes/icono.jpg">
+    <link rel="stylesheet" href="css/targetas.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Brahiam Velasquez">
+    <link rel="stylesheet" href="css/apoyo.css">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+      <!-- Google Fonts Roboto -->
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      />
+      <!-- MDB -->
+      <link rel="stylesheet" href="css/mdb.min.css" />
+    <title>Hand Made</title>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <div class="container-fluid">
+   <img src="imagenes/logo2.jpg" width="15%">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Productos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="manillas.php">Pulseras</a></li>
+            <li><a class="dropdown-item" href="Camisetas.php">Camisetas</a></li>
+            <li><a class="dropdown-item" href="gorra.php">Gorras</a></li>
+          </ul>
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="crea.php">Personalizar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="login.php">Cuenta</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="apoyo.php">Te apoyamos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="productos.php">Tienda</a>
+        </li>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+        
+      }
+
+      @media (max-width: 500px) {
+        .carousel-inner>div>img{
+        display: block;
+        height: auto;
+        max-width: 100%;
+        line-height: 1;
+        width: 100%;
+        }
+      }
+    
+        
+</style>
+</head>
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+
+
+
+  <body >
+    
+<div class="inicio text-center mt-5">
+    <h1 style="font-size: 45px;">Tienda <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-basket3-fill" viewBox="0 0 16 16">
+  <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.468 15.426.943 9h14.114l-1.525 6.426a.75.75 0 0 1-.729.574H3.197a.75.75 0 0 1-.73-.574z"/>
+</svg> </h1>
+
+   
+    <p style="font-size: 25px;">Elije tus productos</p>
+    
+</div>
+
+<input type="hidden" id="productosacomprar" class="form-control">
+<input type="hidden" id="numero_cliente_1" class="form-control" value="<?php echo $consecutivo_para_cliente; ?>">
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="container__cards">
+
+
+        <?php
+
+        $consulta_todos_los_productos=mysqli_query($coneccion,"select * from productos where activo='si'");
+
+        while($producto=mysqli_fetch_array($consulta_todos_los_productos))
+        
+        {
+        ?>
+        <div class="col-sm-12 col-lg-4">
+            <div class="card">
+            <img src="imagenes/productos/<?php echo$producto["foto"]; ?>" alt="">
+            <div class="card-body">
+                <h5 class="card-title"><?php echo $producto["nombreProducto"]; ?></h5>
+                <p class="card-text"><?php echo $producto["descripcion"]; ?></p>
+          
+                
+                <button id="boton<?php echo$producto["id"]; ?>" onclick="agregar_al_carrito(<?php echo$producto["id"]; ?>)" class="btn btn-primary">Agregar al carrito!</button>
+
+                <!--<a href="carrito_compras.php?idproducto=<?php echo$producto["id"]; ?>&accion=guardar_en_carrito" onclick="agregar_al_carrito()" class="btn btn-primary">Agregar al carrito</a>-->
+            </div>
+            </div>
+        </div>
+        <?php 
+        }
+        ?> 
+         
+         <div>
+   <button class="btn btn-warning" onclick="finalizar_compra()" id="btn-finalizar" style="display:none;">Finalizar compra!</button>
+ </div>
+ <script>
+   function finalizar_compra()
+          {
+            var numero_compra=document.getElementById("numero_cliente_1").value; 
+            var productos_compra=document.getElementById("productosacomprar").value; 
+
+            window.location.href = "finalizar_compra.php?numero_compra="+numero_compra+"&productos_de_compra="+productos_compra;
+            
+          }
+ </script>
+
+    </div>
+    
+  </div><!-- /.container --> <br>
+ 
+
+  
+  <hr class="featurette-divider">
+
+
+ <!-- Remove the container if you want to extend the Footer to full width. -->
+
+<!-- End of .container -->
+
+</main>
+<script src="js/jquery.js" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script><script src="js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+     
+</html>

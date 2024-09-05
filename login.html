@@ -1,0 +1,242 @@
+<?php
+error_reporting(E_ERROR);
+
+
+
+$edad=8;
+$permiso="si";
+
+//Dos metodos (GET Y POST)
+//tomar un valor de POST
+
+$registro_exitoso=$POST["reg_exitoso"];
+
+?>
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/jpg" href="imagenes/icono.jpg">
+    <link rel="stylesheet" href="css/targetas.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Brahiam Velasquez">
+    <link rel="stylesheet" href="css/apoyo.css">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+      <!-- Google Fonts Roboto -->
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      />
+      <!-- MDB -->
+      <link rel="stylesheet" href="css/mdb.min.css" />
+    <title>Hand Made</title>
+    
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <div class="container-fluid">
+   <img src="imagenes/logo2.jpg" width="15%">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
+        </li>       
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+        
+      }
+
+      @media (max-width: 500px) {
+        .carousel-inner>div>img{
+        display: block;
+        height: auto;
+        max-width: 100%;
+        line-height: 1;
+        width: 100%;
+        }
+      }
+      
+ 
+        
+</style>
+
+</head>
+    
+    
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+
+  
+
+  <body  <?php if($registro_exitoso==1){?>style="background:blue" <?php } ?> >
+  
+<!--<form method="post" action="src/validar_login.php">-->
+<body>
+
+<div class="container h-100">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card">
+				<div class="d-flex justify-content-center">
+					<div class="brand_logo_container">
+						<img src="imagenes/logo2.jpg" class="brand_logo" alt="Logo">
+					</div>
+				</div>
+				<div class="d-flex justify-content-center form_container">
+					<form  method="post" action="src/validar_login.php" >
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+							<input name="user_email" type="text" class="form-control input_user" value="" placeholder="Correo">
+						</div>
+						<div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+							<input name="user_password" type="password" class="form-control input_pass" value="" placeholder="Contraseña">
+						</div>
+						<div class="form-group">
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customControlInline">
+								<label class="custom-control-label" for="customControlInline">Recuerdame</label>
+							</div>
+						</div>
+							<div class="d-flex justify-content-center mt-3 login_container">
+							<input type="submit" type="button" class="btn btn-dark"  value="Ingresar">
+				   </div>
+					</form>
+				</div>
+		
+				<div class="mt-4">
+					<div class="d-flex justify-content-center links">
+						No tienes cuenta? <a href="registro_1.php" class="ml-2">Registrate</a>
+					</div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+	</body>
+<style>
+	/* Coded with love by Mutiullah Samim */
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			background: #fff !important;
+		}
+	
+		.user_card {
+			height: 400px;
+			width: 350px;
+			margin-top: auto;
+			margin-bottom: auto;
+			background: #9c9c9c;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding: 10px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 5px;
+
+		}
+		.brand_logo_container {
+			position: absolute;
+			height: 170px;
+			width: 170px;
+			top: -75px;
+			border-radius: 50%;
+			background: #000;
+			padding: 10px;
+			text-align: center;
+		}
+		.brand_logo {
+			height: 150px;
+			width: 150px;
+			border-radius: 50%;
+			border: 2px solid white;
+		}
+		.form_container {
+			margin-top: 100px;
+		}
+		.login_btn {
+			width: 100%;
+			background: #000 !important;
+			color: white !important;
+		}
+		.login_btn:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.login_container {
+			padding: 0 2rem;
+		}
+		.input-group-text {
+			background: #222222 !important;
+			color: white !important;
+			border: 0 !important;
+			border-radius: 0.25rem 0 0 0.25rem !important;
+		}
+		.input_user,
+		.input_pass:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+			background-color: #9c9c9c !important;
+		}
+</style>
+
+
+
+
+
+ 
+
+<script src="js/jquery.js" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script><script src="js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+      <script>
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene);
+
+      </script>
+</html>

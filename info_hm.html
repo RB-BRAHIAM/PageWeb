@@ -1,0 +1,480 @@
+<?php
+error_reporting(E_ERROR);
+
+
+
+$edad=8;
+$permiso="si";
+
+//Dos metodos (GET Y POST)
+//tomar un valor de POST
+
+$registro_exitoso=$POST["reg_exitoso"];
+
+?>
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/jpg" href="imagenes/icono.jpg">
+    <link rel="stylesheet" href="css/targetas.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Brahiam Velasquez">
+    <link rel="stylesheet" href="css/apoyo.css">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+      <!-- Google Fonts Roboto -->
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      />
+      <!-- MDB -->
+      <link rel="stylesheet" href="css/mdb.min.css" />
+    <title>Hand Made</title>
+    
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+        
+      }
+
+      @media (max-width: 500px) {
+        .carousel-inner>div>img{
+        display: block;
+        height: auto;
+        max-width: 100%;
+        line-height: 1;
+        width: 100%;
+        }
+      }
+    
+   
+    
+        #menuppal
+        {
+         background-color: #fff;
+         text-shadow: #000;
+         color: #000;
+         text-decoration-color: black;
+        }
+ 
+.container__cards{
+
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.card{
+    width: 300px;
+    margin: 10px;
+    transition: all 300ms;
+  
+}
+
+.card:hover{
+    width: 350px;
+    
+}
+
+.card .cover{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card .cover img{
+    width: 250px;
+    display: block;
+    margin: none;
+    position: relative;
+    top: 40px;
+    z-index: 1;
+    filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));
+    transition: all 400ms;
+}
+
+.card:hover .cover img{
+    top: 0px;
+    filter: none;
+}
+
+.card .img__back{
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    background-size: cover;
+    border-radius: 20px;
+    transition: all 300ms;
+}
+
+.card:nth-of-type(1) .img__back{
+
+    background-image: url(imagenes/Gray-background.jpg);
+}
+
+.card:nth-of-type(2) .img__back{
+
+    background-image: url(imagenes/Gray-background.jpg);
+}
+
+.card:nth-of-type(3) .img__back{
+
+    background-image: url(imagenes/Gray-background.jpg);
+}
+
+.card:hover .img__back{
+    bottom: -40px;
+}
+
+.card .description{
+   
+    margin-top: -10px;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+    transition: all 300ms;
+    background: #fff;
+}
+
+.card:hover .description{
+    padding: 40px;
+}
+
+.card .description h2{
+    margin-top: 10px;
+}
+
+.card .description p{
+    margin-top: 10px;
+}
+
+.card .description input{
+    
+    padding: 10px 40px;
+    margin-top: 20px;
+    border: none;
+    background: #757575  ;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 300ms;
+}
+
+.card .description input:hover{
+    background: #000 ;
+    padding: 10px 80px;
+
+ }
+
+    </style>
+
+
+    
+    
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+
+  </head>
+
+  <body  <?php if($registro_exitoso==1){?>style="background:blue" <?php } ?> >
+    <header>
+      
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top " id="menuppal">
+    <img src="imagenes/logo2.jpg" width="10%" >
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a style="color: black;" class="nav-link" href="index.php">Inicio <span class="sr-only">(current)</span></a>
+        </li>
+        
+     
+          
+      
+      </ul>
+     
+    </div>
+  </nav> 
+
+
+
+
+  
+</header>
+
+<main role="main">
+
+  
+</main>
+
+
+  <div class="container marketing">
+
+<br><br><br><br>
+
+    <h1 class="text-center">SOBRE NOSOTROS</h1>
+
+    <!-- Three columns of text below the carousel -->
+    <div class="container__cards">
+        <div class="card">
+            <div class="cover">
+                <img src="imagenes/Brahiam.png" alt="">
+                <div class="img__back"></div>
+            </div>
+            <div class="description">
+                <h2 class="text-center">Brahiam velasquez</h2>
+                <p class="text-justify">
+                 Brahiam Velasquez, 17 años y actualmente cursando el grado once, Programador principal del proyecto
+                </p>
+            </div>
+        </div>
+    </div>
+
+   <br><br><br>
+
+     <div class="row">
+  <div class="row featurette">
+   <div class="col-md-7">
+
+    <br><br><br><br>
+    <h2 class="featurette-heading  fs-2 fw-bold text-center"> NUESTRA VISIÓN </h2>
+
+    <p class=" text-dark  shadow-lg p-3 mb-5 bg-body rounded lead text-justify">
+    
+    Handmade Seremos una empresa líder en el año 2025 convirtiéndonos en la mejor opción en el mercado por calidad e innovación. Comprometidos siempre con el crecimiento de nuestro equipo humano, el mejoramiento de nuestros procesos y una óptima rentabilidad. Sera reconocida a nivel nacional e internacional por su eficacia y rapidez con la que elabora sus prendas y accesorios, comenzando en las principales ciudades de Colombia; además se innovarán sus diseños cada año durante 5 años.
+
+    </p>
+  </div>
+  <div class="col-md-5">
+    
+    
+
+    <img src="imagenes/Vision.png" style="width: 100%; height: 100%;">
+  </div>
+
+   </div>
+
+
+
+    <div class="col-md-5">
+    <img src=" imagenes/mision.png " style="width: 100%; height:100%;">
+    </div>
+
+  <div class="col-md-7">
+    <h2 class="featurette-heading  text-right fs-2 fw-bold text-center"> NUESTRA MISIÓN</h2>
+    <p class=" text-dark  shadow-lg p-3 mb-5 bg-body rounded lead text-justify">
+    Somos una empresa colombiana competitiva que se destaca por medio de productos innovadores, que cumple con las necesidades y exigencias de nuestros clientes; dedicada al diseño, fabricación y venta de prendas y accesorios de vestir reales, que quieran expresar a través de la moda un estilo único, personal y atractivo.Para nosotros es muy importante mantener un ambiente de trabajo que promueva la calidad de vida para nuestros empleados, que al mismo tiempo nos permite competir tanto en el mercado nacional y más adelante en el mercado internacional. Contamos con equipo avanzado en maquinaria para la creación de nuestros productos.
+    </p>
+  </div>         
+   
+  <div class="row featurette">
+   <div class="col-md-7">
+
+
+    <h2 class="featurette-heading  fs-2 fw-bold text-center"> OBJETIVOS </h2>
+
+    <p class=" text-dark  shadow-lg p-3 mb-5 bg-body rounded lead">
+    
+    <strong>OBJETIVO GENERAL</strong> <br>
+Pretendemos ser una empresa nacionalmente reconocida como una de las mejores, por nuestro excelente servicio al cliente, gran variedad de productos, logrando posicionar nuestra empresa HAND MADE en lo más alto de la industria textil. <br>
+
+
+<strong> OBJETIVOS ESPECIFICOS </strong> <br>
+•	Contar con un grupo de personas capacitadas con recursos para poder posicionarnos en el mercado como líderes en preferencia del consumidor. <br>
+•	Comercializar en forma eficiente productos con alto valor agregado. <br>
+•	Estar a la vanguardia de la Moda para poder ofrecer un servicio único. <br>
+
+
+    </p>
+  </div>
+  
+  <div class="col-md-5">
+    
+    
+
+    <img src="imagenes/objetivos.png" style="width: 100%; height: 100%;">
+  </div>
+
+   </div>
+  
+
+  </div><!-- /.container -->
+
+  <hr class="featurette-divider">
+
+
+ <!-- Remove the container if you want to extend the Footer to full width. -->
+<div class="">
+  <!-- Footer -->
+  <footer
+          class="text-center text-lg-start text-black"
+          style="background-color: #fff"
+          >
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-4">
+            <h6 class="text-uppercase mb-4 font-weight-bold">
+              HAND-MADE
+            </h6>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuit cupiditate ratione! Asperiores exercitationem adipisci quam eos nobis eum.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Productos</h6>
+            <p>
+              <a href="manillas.php">Pulseras</a>
+            </p>
+            <p>
+              <a href="camisetas.php">Camisetas</a>
+            </p>
+            <p>
+              <a href="gorra.php">Gorras</a>
+            </p>
+            <p>
+              
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Contacto</h6>
+            <p><i class="fas fa-home mr-3"></i> Medellín Colombia</p>
+            <p><i class="fas fa-envelope mr-3"></i> handmade@gmail.com</p>
+            <p><i class="fas fa-phone mr-3"></i> +57 3193506361</p>
+          </div>
+          <!-- Grid column -->
+          
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Siguenos</h6>
+            
+            <!-- Facebook -->
+            <a
+            class="btn btn-clear m-2 st"
+            style="background-color: white"
+            href="https://www.facebook.com/Handmade-100767449078742"
+            role="button"
+            ><img src="imagenes/icons/facebook.png" width="25px" height="25px">
+            </a>
+            
+            
+            <!-- whatsapp -->
+            <a
+            
+            class="btn btn-clear m-2 st"
+            style="background-color: white"
+            href="https://api.whatsapp.com/send?phone=3193506361"
+            role="button"
+            ><img src="imagenes/icons/whatsapp_icon.png" width="25px" height="25px">
+            </a>
+            
+            <!-- Twitter -->
+            <a
+            class="btn btn-clear m-2 st"
+            style="background-color: white"
+            href="https://twitter.com/Handmad87937613"
+            role="button"
+            ><img src="imagenes/icons/twitter.png" width="25px" height="25px">
+            </a>
+            
+            
+            <!-- Instagram -->
+            <a
+            class="btn btn-clear m-2 st"
+            style="background-color: white"
+            href="https://www.instagram.com/handmade_empresa_2021/?hl=es"
+            role="button"
+            ><img src="imagenes/icons/instagram_icon.png" width="25px" height="25px">
+            </a>
+  
+            
+            
+          </div>
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div
+         class="text-center p-3"
+         style="background-color: rgba(0, 0, 0, 0.2)"
+         >
+      © 2020 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/"
+         >Hand-made.com</a
+        >
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</div>
+<!-- End of .container -->
+
+</main>
+<script src="js/jquery.js" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script><script src="js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+      <script>
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene);
+
+      </script>
+</html>
